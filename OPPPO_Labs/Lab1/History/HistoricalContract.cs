@@ -4,6 +4,12 @@ internal class HistoricalContract : HistoricalEventBase
 {
     public HashSet<string> Governments { get; private set; } = new HashSet<string>();
 
+    public HistoricalContract(DateOnly date, string eventName)
+        :base(date, eventName)
+    {
+        
+    }
+
     public void AddGovernment(string government)
     {
         if (string.IsNullOrWhiteSpace(government))
