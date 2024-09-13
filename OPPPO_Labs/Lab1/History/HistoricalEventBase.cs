@@ -17,4 +17,11 @@ internal abstract class HistoricalEventBase
         EventDate = date;
         EventName = eventname;
     }
+
+    public virtual string GetDetails()
+    {
+        return new StringBuilder()
+            .Append(EventDate.ToString())
+            .Append(EventName).ToString();
+    }
 }

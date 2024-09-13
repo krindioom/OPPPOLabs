@@ -22,4 +22,29 @@ internal class HistoricalContract : HistoricalEventBase
             .ToLower();
         Governments.Add(government);
     }
+
+    public HistoricalContract AddGovernments(params string[] governments)
+    {
+        foreach (var government in governments)
+        {
+            if (string.IsNullOrWhiteSpace(government))
+            {
+                throw new ArgumentNullException("пустая строка");
+            }
+
+            government
+                .Trim()
+                .ToLower();
+            Governments.Add(government);
+        }
+
+        return this;
+    }
+
+    public override string GetDetails()
+    {
+        var governmentsList = Governments.Count > 0 ? string.Join(", ", Governments) : "No governments";
+
+        return base.GetDetails() + governmentsList;
+    }
 }

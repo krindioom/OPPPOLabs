@@ -4,16 +4,16 @@ namespace Lab1;
 
 internal class HistoricalEventContext
 {
-    public List<HistoricalEventBase> historicalEvents = new List<HistoricalEventBase>();
+    private List<HistoricalEventBase> _historicalEvents = new List<HistoricalEventBase>();
 
     public void Add(HistoricalEventBase historicalEventBase)
     {
-        historicalEvents.Add(historicalEventBase);
+        _historicalEvents.Add(historicalEventBase);
     }
 
     public void Remove(string name)
     {
-        var sellections = historicalEvents
+        var sellections = _historicalEvents
             .Where(x => x.EventName.Contains(name));
 
         if (!sellections.Any())
@@ -21,31 +21,35 @@ internal class HistoricalEventContext
             return;
         }
 
-        historicalEvents
-        .ForEach(x => historicalEvents.Remove(x));
+        _historicalEvents
+        .ForEach(x => _historicalEvents.Remove(x));
     }
 
     public void Remove(DateOnly date)
     {
-        var sellections = historicalEvents
-            .Where(x => x.EventDate == date);
+        var sellections = _historicalEvents
+            .Where(x => x.EventDate == date)
+            .ToList();
 
-        if (!sellections.Any())
+        foreach (var historicalEvent in sellections)
         {
-            return;
+            _historicalEvents.Remove(historicalEvent);
         }
-
-        historicalEvents
-        .ForEach(x => historicalEvents.Remove(x));
     }
+
 
     public IEnumerable<HistoricalEventBase> GetHistoricalEvents(string name)
     {
-        return historicalEvents.Where(x => x.EventName.Contains(name));
+        return _historicalEvents.Where(x => x.EventName.Contains(name));
     }
     
     public IEnumerable<HistoricalEventBase> GetHistoricalEvents(DateOnly date)
     {
-        return historicalEvents.Where(x => x.EventDate == date);
+        return _historicalEvents.Where(x => x.EventDate == date);
+    }
+
+    public IEnumerable<HistoricalEventBase> GetHistoricalEvents()
+    {
+        return _historicalEvents;
     }
 }
