@@ -6,6 +6,14 @@ internal class HistoricalEventContext
 {
     private List<HistoricalEventBase> _historicalEvents = new List<HistoricalEventBase>();
 
+    internal HistoricalEventBase HistoricalEventBase
+    {
+        get => default;
+        set
+        {
+        }
+    }
+
     public void Add(HistoricalEventBase historicalEventBase)
     {
         _historicalEvents.Add(historicalEventBase);

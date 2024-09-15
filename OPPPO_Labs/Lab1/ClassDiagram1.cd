@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Lab1.Commands.AddCommand" Collapsed="true">
+    <Position X="8.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\AddCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab1.Commands.CommandBase" Collapsed="true">
+    <Position X="11.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\CommandBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="0.1" />
+  </Class>
+  <Class Name="Lab1.Commands.CommandProcessor" Collapsed="true">
+    <Position X="14.25" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAACAAAAAAAAAAAAAAAABAAAABAAAAA=</HashCode>
+      <FileName>Commands\CommandProcessor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CommandBase" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Lab1.Commands.PrintCommand" Collapsed="true">
+    <Position X="12.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\PrintCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab1.Commands.RemoveByDateCommand" Collapsed="true">
+    <Position X="15" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\RemoveByDateCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab1.Commands.RemoveByNameCommand" Collapsed="true">
+    <Position X="10.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\RemoveByNameCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab1.History.Battle" Collapsed="true">
+    <Position X="4" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>History\Battle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab1.History.HistoricalContract" Collapsed="true">
+    <Position X="6" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAACAAAAABA=</HashCode>
+      <FileName>History\HistoricalContract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab1.HistoricalEventContext">
+    <Position X="1.5" Y="3.75" Width="2.25" />
+    <AssociationLine Name="HistoricalEventBase" Type="Lab1.History.HistoricalEventBase">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.11" Y="0.06" Height="0.182" Width="0.808" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAABAAAAAAABAAAAAAAIAAAAAABAAAAAAA=</HashCode>
+      <FileName>HistoricalEventContext.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HistoricalEventBase" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Lab1.History.HistoricalEventBase" Collapsed="true">
+    <Position X="4.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAABAAAA=</HashCode>
+      <FileName>History\HistoricalEventBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Lab1.Commands.ICommand">
+    <Position X="9" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\ICommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
