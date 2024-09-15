@@ -4,14 +4,6 @@ internal class CommandProcessor
 {
     private readonly List<ICommand> _commands = new List<ICommand>();
 
-    internal CommandBase CommandBase
-    {
-        get => default;
-        set
-        {
-        }
-    }
-
     public CommandProcessor AddCommand(ICommand command)
     {
         _commands.Add(command);
